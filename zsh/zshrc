@@ -78,7 +78,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/201
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias emacs="open -a /Applications/Emacs.app"
+alias emacsapp="open -a /Applications/Emacs.app"
+alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -a emacs-cocoa"
+alias killemacs="emacsclient -e '(kill-emacs)'"
 eval "$(thefuck --alias)"
 # Chinese support
 export LC_ALL=en_US.UTF-8  

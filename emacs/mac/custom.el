@@ -17,7 +17,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Appearance ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set Font as Source code pro
 ;; (setq default-frame-alist '((font . "Source Code Pro-12.5")))
-(setq default-frame-alist '((font . "Monaco-12.5")))
+(setq default-frame-alist '((font . "Source Code Pro-12.5")))
 ;; Show line number
 (global-linum-mode t)
 
@@ -30,6 +30,18 @@
 (setq mac-command-modifier 'super)
 (setq mac-option-modifier 'meta)
 
+(global-set-key (kbd "<C-f2>") 'bm-toggle)
+(global-set-key (kbd "<f2>") 'bm-next)
+(global-set-key (kbd "<S-f2>") 'bm-previous)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;; Package settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use X window clipboard
+;; (xclip-mode t)
+
+;; (global-highlight-parentheses-mode t)
+;; Disable smartparens, it will freeze emacs
+;; (add-hook 'prelude-prog-mode-hook (lambda () (smartparens-mode -1)) t)
+;; (show-smartparens-global-mode -1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Auto Generated ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
