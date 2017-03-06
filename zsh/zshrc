@@ -45,7 +45,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew ls forklift pip)
+plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,8 +54,16 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2015/bin/x86_64-darwin/"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Development path
+export DEV=$HOME/Develop
+
+# Go Settup
+export GOPATH=$DEV/Go
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -83,6 +91,3 @@ alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -a emacs-cocoa"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 eval "$(thefuck --alias)"
-# Chinese support
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
