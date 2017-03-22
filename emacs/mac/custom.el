@@ -4,22 +4,22 @@
 
 ;;; Code:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(prelude-require-packages '(qml-mode bm))
+(prelude-require-packages '(qml-mode bm nlinum))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Prelude ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Disable whitespace mode
 (setq prelude-whitespace nil)
 ;; Disable flyspell check
-(setq prelude-flyspell nil)
+;; (setq prelude-flyspell nil)
 ;; Do not remove whitespace
-(setq prelude-clean-whitespace-on-save nil)
+;; (setq prelude-clean-whitespace-on-save nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Appearance ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set Font as Source code pro
 ;; (setq default-frame-alist '((font . "Source Code Pro-12.5")))
 (setq default-frame-alist '((font . "Source Code Pro-12.5")))
 ;; Show line number
-(global-linum-mode t)
+(global-nlinum-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Key bindings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Remap tab to autocomplete in helm mode
@@ -42,8 +42,8 @@
 
 ;; (global-highlight-parentheses-mode t)
 ;; Disable smartparens, it will freeze emacs
-(add-hook 'prelude-prog-mode-hook (lambda () (smartparens-mode -1)) t)
-(show-smartparens-global-mode -1)
+;; (add-hook 'prelude-prog-mode-hook (lambda () (smartparens-mode -1)) t)
+;; (show-smartparens-global-mode -1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Auto Generated ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
