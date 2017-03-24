@@ -8,7 +8,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Prelude ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Disable whitespace mode
-(setq prelude-whitespace nil)
+;; (setq prelude-whitespace nil)
 ;; Disable flyspell check
 (setq prelude-flyspell nil)
 ;; Do not remove whitespace
@@ -22,7 +22,8 @@
 (global-nlinum-mode t)
 ;; Hide scroll bar
 (scroll-bar-mode -1)
-
+;; Whitespace mode style
+(setq whitespace-style '(face tab empty trailing))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Key bindings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Remap tab to autocomplete in helm mode
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
