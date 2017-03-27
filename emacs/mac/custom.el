@@ -34,8 +34,8 @@
 (setq mac-option-modifier 'super)
 
 (global-set-key (kbd "C-;") 'bm-toggle)
-(global-set-key (kbd "<f2>") 'bm-next)
-(global-set-key (kbd "s-<f2>") 'bm-previous)
+(global-set-key (kbd "M-;") 'bm-next)
+(global-set-key (kbd "s-;") 'bm-previous)
 
 (global-set-key (kbd "C-.") 'helm-projectile-ag)
 (global-set-key (kbd "C-,") 'helm-projectile-find-file)
@@ -43,10 +43,13 @@
 ;; Use X window clipboard
 ;; (xclip-mode t)
 
-;; (global-highlight-parentheses-mode t)
-;; Disable smartparens, it will freeze emacs
-;; (add-hook 'prelude-prog-mode-hook (lambda () (smartparens-mode -1)) t)
-;; (show-smartparens-global-mode -1)
+(global-highlight-parentheses-mode t)
+
+;; Disable smartparens for large files, otherwise it will freeze emacs
+(add-hook 'prelude-prog-mode-hook (lambda ()
+                                    (when (> (buffer-size) 40000)
+                                      (smartparens-mode -1))))
+(show-smartparens-global-mode -1)
 
 
 (elpy-enable)
