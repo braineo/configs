@@ -95,6 +95,7 @@ alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -a emacs-cocoa"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 eval "$(thefuck --alias)"
+export TERM="xterm-256color"
 
 # Powerline setup
 detached_head(){

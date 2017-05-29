@@ -12,7 +12,7 @@
 ;; Disable flyspell check
 (setq prelude-flyspell nil)
 ;; Do not remove whitespace
-;; (setq prelude-clean-whitespace-on-save nil)
+(setq prelude-clean-whitespace-on-save nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Appearance ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set Font as Source code pro
@@ -50,7 +50,6 @@
                                     (when (> (buffer-size) 40000)
                                       (smartparens-mode -1))))
 (show-smartparens-global-mode -1)
-
 
 ;; (elpy-enable)
 ;; (elpy-use-ipython)
