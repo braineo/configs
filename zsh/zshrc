@@ -104,7 +104,7 @@ detached_head(){
         if [[ -n $BRANCH_NAME ]]; then
             echo ""
         else
-            echo "\$(__git_ps1 '%s')"
+            echo "$(__git_ps1 '%s')"
         fi
     fi
 }
