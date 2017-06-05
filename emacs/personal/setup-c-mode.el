@@ -1,4 +1,4 @@
-(prelude-require-packages '(company-c-headers helm-gtags function-args cc-mode irony))
+(prelude-require-packages '(company-c-headers helm-gtags function-args cc-mode irony company-irony))
 
 (require 'company)
 (add-to-list 'company-backends '(company-c-headers company-irony))
