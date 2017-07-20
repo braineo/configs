@@ -16,14 +16,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Appearance ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set Font as Source code pro
-;; (setq default-frame-alist '((font . "Source Code Pro-12.5")))
 (setq default-frame-alist '((font . "Source Code Pro-12.5")))
-;; Show line number
+;; Show line number. Disable it due to performance issue. Also try using nlinum-mode
 (global-nlinum-mode t)
 ;; Hide scroll bar
 (scroll-bar-mode -1)
-;; Whitespace mode style
-(setq whitespace-style '(face tab empty trailing))
+;; Whitespace mode style: Show tabs empty and trailling spaces
+(setq whitespace-style '(face tabs empty trailing))
 ;; Transparency setting
 (set-frame-parameter (selected-frame) 'alpha '(85 50))
 (add-to-list 'default-frame-alist '(alpha 85 50))
@@ -44,22 +43,40 @@
 
 (global-set-key (kbd "C-.") 'helm-projectile-ag)
 (global-set-key (kbd "C-,") 'helm-projectile-find-file)
+;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Package settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use X window clipboard
 ;; (xclip-mode t)
 
 (global-highlight-parentheses-mode t)
 
-;; Disable smartparens for large files, otherwise it will freeze emacs
+;; Comment style
+(setq comment-style 'multi-line)
+
+;; Disable smartparens for large files, it will freeze emacs when opening
 (add-hook 'prelude-prog-mode-hook (lambda ()
                                     (when (> (buffer-size) 40000)
                                       (smartparens-mode -1))))
 (show-smartparens-global-mode -1)
 
+;; Disable which-function-mode in python-mode when open large files
+(add-hook 'prelude-python-mode-hook (lambda ()
+                                      (when (> (buffer-size) 20000)
+                                        (which-function-mode -1))))
+
+;; Elpy Setup
 ;; (elpy-enable)
 ;; (elpy-use-ipython)
 ;; (setq elpy-rpc-backend "jedi")
+
+;; Highlight-indentation
+(defun set-highlight-indentation-mode-background ()
+  (set-face-background 'highlight-indentation-face "#1d1f21")
+  (set-face-background 'highlight-indentation-current-column-face "#121314"))
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
+(add-hook 'highlight-indentation-mode-hook 'set-highlight-indentation-mode-background)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; Auto Generated ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
