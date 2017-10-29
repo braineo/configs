@@ -45,7 +45,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting gitfast pyenv)
+
+plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting zsh-completions gitfast pyenv autojump npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,7 +113,7 @@ detached_head(){
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="❯ "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="❯ "
 POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(custom_detached_head time)
@@ -126,3 +127,7 @@ GIT_PS1_DESCRIBE_STYLE='branch'
 
 # Z shell setup
 unsetopt nomatch
+
+# autojump setup
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
