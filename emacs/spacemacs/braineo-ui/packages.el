@@ -63,9 +63,9 @@ Each entry is either:
     :defer t
     :init
     (progn
-      (defun set-highlight-indentation-mode-background ()
-        (set-face-background 'highlight-indentation-face "#1d1f21")
-        (set-face-background 'highlight-indentation-current-column-face "#121314"))
-      (add-hook 'python-mode-hook 'highlight-indentation-mode)
-      (add-hook 'highlight-indentation-mode 'set-highlight-indentation-mode-background))))
+      (add-hook 'python-mode-hook 'highlight-indentation-mode))
+    :config
+    (progn
+      (set-face-background 'highlight-indentation-face "#1d1f21")
+      (set-face-background 'highlight-indentation-current-column-face "#121314"))))
 ;;; packages.el ends here
