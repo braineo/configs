@@ -30,7 +30,8 @@
 ;;; Code:
 
 (defconst braineo-packages
-  '(crux)
+  '(crux
+    xclip)
   "The list of Lisp packages required by the braineo layer.
 
 Each entry is either:
@@ -63,4 +64,10 @@ Each entry is either:
   :config
   (progn
     (crux-reopen-as-root-mode)))
+
+(defun braineo/init-xclip ()
+  :defer t
+  :config
+  (progn
+    (xclip-mode)))
 ;;; packages.el ends here
