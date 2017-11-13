@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst braineo-ui-packages
-  '()
+  '(highlight-indentation)
   "The list of Lisp packages required by the braineo-ui layer.
 
 Each entry is either:
@@ -58,5 +58,14 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-
+(defun braineo-ui/init-highlight-indentation ()
+  (use-package highlight-indentation
+    :defer t
+    :init
+    (progn
+      (defun set-highlight-indentation-mode-background ()
+        (set-face-background 'highlight-indentation-face "#1d1f21")
+        (set-face-background 'highlight-indentation-current-column-face "#121314"))
+      (add-hook 'python-mode-hook 'highlight-indentation-mode)
+      (add-hook 'highlight-indentation-mode 'set-highlight-indentation-mode-background))))
 ;;; packages.el ends here
