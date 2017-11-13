@@ -58,7 +58,7 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-(defun braineo-ui/init-highlight-indentation ()
+(defun braineo-ui/post-init-highlight-indentation ()
   (use-package highlight-indentation
     :defer t
     :init

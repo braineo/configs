@@ -64,7 +64,7 @@ Each entry is either:
 
 (defun braineo-editor/init-bm ())
 
-(defun braineo-editor/init-smartparens ()
+(defun braineo-editor/post-init-smartparens ()
   (use-package smartparens
     :defer t
     :init
