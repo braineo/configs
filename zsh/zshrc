@@ -59,6 +59,9 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texli
 # export MANPATH="GNUMAN:MANPATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Homebrew python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Development path
 export DEV=$HOME/Develop
 
@@ -128,6 +131,5 @@ GIT_PS1_DESCRIBE_STYLE='branch'
 # Z shell setup
 unsetopt nomatch
 
-# autojump setup
+#Auto Jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-

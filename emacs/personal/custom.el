@@ -16,7 +16,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Appearance ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set Font as Source code pro
-(setq default-frame-alist '((font . "Source Code Pro-12.5")))
+(setq default-frame-alist '((font . "Source Code Pro for Powerline-12.5")))
 ;; Show line number. Disable it due to performance issue. Also try using nlinum-mode
 (global-nlinum-mode t)
 ;; Hide scroll bar
@@ -83,15 +83,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "9be1d34d961a40d94ef94d0d08a364c3d27201f3c98c9d38e36f10588469ea57" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" "d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "243bd9824b2a2203c4cf22e306e4fba73f9e6d6f0b032176876980da471bdca5" default)))
- '(helm-gtags-auto-update t)
- '(helm-gtags-ignore-case t)
- '(helm-gtags-path-style (quote relative))
  '(package-selected-packages
    (quote
-    (markdown-mode molokai-theme material-theme hc-zenburn-theme company-irony cmake-mode irony function-args swift-mode ggtags helm-gtags company-c-headers zop-to-char zenburn-theme which-key volatile-highlights vkill undo-tree smartrep smartparens smart-mode-line qml-mode projectile ov operate-on-number nlinum move-text magit imenu-anywhere highlight-parentheses highlight-indentation guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region exec-path-from-shell editorconfig easy-kill discover-my-major diminish diff-hl crux color-theme-sanityinc-tomorrow browse-kill-ring bm beacon anzu ace-window))))
+    (swift-mode company-irony irony function-args helm-gtags company-c-headers color-theme-sanityinc-tomorrow vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
