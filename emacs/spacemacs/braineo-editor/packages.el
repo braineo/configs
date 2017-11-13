@@ -31,7 +31,8 @@
 
 (defconst braineo-editor-packages
   '(easy-kill
-    bm)
+    bm
+    smartparens)
   "The list of Lisp packages required by the braineo-editor layer.
 
 Each entry is either:
@@ -62,5 +63,15 @@ Each entry is either:
 (defun braineo-editor/init-easy-kill ())
 
 (defun braineo-editor/init-bm ())
+
+(defun braineo-editor/init-smartparens ()
+  (use-package smartparens
+    :defer t
+    :init
+    (progn
+      (add-hook 'prelude-prog-mode-hook (lambda ()
+                                          (when (> (buffer-size) 40000)
+                                            (smartparens-mode -1)
+                                            (show-smartparens-global-mode -1)))))))
 
 ;;; packages.el ends here
