@@ -10,7 +10,7 @@ for layer in *; do
     if [[ -n "${map[$layer]}" ]]; then
         TARGET="${HOME}/.emacs.d/private/${layer}"
         if [[ -e ${TARGET} ]]; then
-            rm ${TARGET}
+            rm -rf ${TARGET}
         fi;
         echo "Linking layer $layer"
         ln -s "${PRIVATEPATH}/${layer}" ${TARGET}
