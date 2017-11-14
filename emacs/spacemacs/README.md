@@ -18,4 +18,17 @@ Each created file has further guidance written in them.
 Once the configuration is done, restart Emacs to load, install and configure
 your layer.
 
+## Install dependencies
+
+```bash
+# Python auto complete
+pip install --upgrade "jedi>=0.9.0" "json-rpc>=1.8.1" "service_factory>=0.1.5"
+
+# Python syntax check
+pip install flake8
+
+# React related
+npm install -g tern eslint babel-eslint eslint-plugin-react js-beautify
+```
+
 [conf_layers]: https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#extensions-and-packages
