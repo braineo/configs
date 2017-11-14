@@ -1,0 +1,4 @@
+[flake8]
+ignore = E121,E123,E126,E133,E2,E3,E501,E704,W2,W503
+exclude = tests/*
+max-complexity = 10
