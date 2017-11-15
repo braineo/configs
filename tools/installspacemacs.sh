@@ -2,8 +2,8 @@
 
 set -e
 
-SCRIPT=$(basename $0)
-MODE=${1:-setup}
+# SCRIPT=$(basename $0)
+# MODE=${1:-setup}
 
 # Use colors, but only if connected to a terminal, and that terminal
 # supports them.
