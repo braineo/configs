@@ -61,11 +61,11 @@ declare -a layers=("braineo" "braineo-ui" "braineo-editor" "braineo-global-keybi
 for layer in "${layers[@]}"
 do
     TARGET="${SPACEMACSPATH}/private/${layer}"
-    if [[ -e ${TARGET} ]]; then
+    if [[ -e ${TARGET} ]] || [[ -L ${TARGET} ]]; then
         rm -rf ${TARGET}
     fi;
     printf "${BLUE}Linking layer $layer...${NORMAL}\n"
-    ln -s "${PRIVATEPATH}/${layer}" ${TARGET}
+    ln -s "${BEMACS}/emacs/spacemacs/${layer}" ${TARGET}
 done
 
 # Symlink config dotfile
