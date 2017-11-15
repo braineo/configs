@@ -1,5 +1,3 @@
-(global-set-key (kbd "C-x C-m") 'smex)
-
 (global-set-key (kbd "C-c o") 'crux-open-with)
 ;; mimic popular IDEs binding, note that it doesn't work in a terminal session
 
@@ -25,7 +23,7 @@
 (global-set-key (kbd "C-c TAB") 'crux-indent-rigidly-and-copy-to-clipboard)
 (global-set-key (kbd "C-c I") 'crux-find-user-init-file)
 (global-set-key (kbd "C-c S") 'crux-find-shell-init-file)
-(global-set-key (kbd "C-c i") 'imenu-anywhere)
+(global-set-key (kbd "C-c i") 'imenu-list-minor-mode)
 ;; extra prefix for projectile
 (global-set-key (kbd "s-p") 'projectile-command-map)
 ;; make some use of the Super key

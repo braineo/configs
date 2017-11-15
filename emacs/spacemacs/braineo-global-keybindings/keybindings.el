@@ -61,12 +61,6 @@
 ;; Better kill-ring
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
-;; use hippie-expand instead of dabbrev
-;; (global-set-key (kbd "M-/") 'hippie-expand)
-
-;; replace buffer-menu with ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
