@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+SPACEMACS="$HOME/.bemacs/.emacs.d/"
+EMACSAPP="/usr/bin/emacs"
+if [[ -f /usr/local/bin/emacs ]]; then
+    EMACSAPP="/usr/local/bin/emacs"
+fi;
+
+$EMACSAPP -q -l ~/.bemacs/tools/spacemacs_guest_init.el $@

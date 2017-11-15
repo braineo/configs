@@ -84,3 +84,8 @@ if [[ $OSTYPE == "linux-gnu" ]]; then
     sudo pip install --upgrade "jedi>=0.9.0" "json-rpc>=1.8.1" "service_factory>=0.1.5";
     sudo pip install flake8;
 fi
+
+# Copy executable
+if [[ -d $HOME/.local/bin ]]; then
+    cp ${BEMACS}/bin/bemacs $HOME/.local/bin;
+fi;
