@@ -2,4 +2,5 @@
                                       braineo-global-keybindings
                                       braineo-ui
                                       braineo-editor
+                                      braineo-lang
                                       ))

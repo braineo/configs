@@ -20,7 +20,7 @@ if ! [[ ${MODE} =~ ^(setup|vanilla|guest)$ ]]; then
 fi
 
 # private layers to install
-declare -a layers=(braineo braineo-ui braineo-editor braineo-global-keybindings)
+declare -a layers=(braineo braineo-ui braineo-editor braineo-global-keybindings braineo-lang)
 declare -A map
 
 for key in "${!layers[@]}"; do map[${layers[$key]}]="$key"; done
