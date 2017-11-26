@@ -31,7 +31,8 @@
 
 (defconst braineo-packages
   '(crux
-    xclip)
+    xclip
+    helm)
   "The list of Lisp packages required by the braineo layer.
 
 Each entry is either:
@@ -70,4 +71,10 @@ Each entry is either:
   :config
   (progn
     (xclip-mode)))
+
+(defun braineo/post-init-helm ()
+  :defer t
+  :config
+  (progn
+    (setq helm-split-window-inside-p t)))
 ;;; packages.el ends here
