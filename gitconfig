@@ -1,0 +1,7 @@
+[pull]
+    rebase = true
+[rebase]
+    stat = true
+    missingcommitscheck = warn
+[url "git@github.com:"]
+      insteadOf = https://github.com/
