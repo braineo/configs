@@ -46,21 +46,18 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting zsh-completions gitfast pyenv autojump npm)
+plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting zsh-completions gitfast autojump npm)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2015/bin/x86_64-darwin/"
+# export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2015/bin/x86_64-darwin/"
 # export GNUBIN="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin"
 # export PATH="$GNUBIN:$PATH"
 # export GNUMAN="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:/usr/local/opt/gnu-tar/libexec/gnuman:/usr/local/opt/gnu-sed/libexec/gnuman"
 # export MANPATH="GNUMAN:MANPATH"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# Homebrew python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Development path
 export DEV=$HOME/Develop
@@ -95,8 +92,8 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias emacsapp="open -a /Applications/Emacs.app"
-alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -a emacs-cocoa"
+alias emacsd="emacs --daemon"
+alias emacs="emacsclient -c -a emacs-cocoa"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 eval "$(thefuck --alias)"
 export TERM="xterm-256color"

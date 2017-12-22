@@ -1,0 +1,4 @@
+export PATH="$/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2015/bin/x86_64-darwin/:PATH"
+
+# Homebrew python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
