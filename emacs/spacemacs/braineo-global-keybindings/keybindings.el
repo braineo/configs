@@ -67,8 +67,8 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 (global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
-(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
-(global-set-key (kbd "s-w") 'ace-window)
+(global-set-key (kbd (concat super-keybind-prefix ".")) 'avy-goto-word-or-subword-1)
+(global-set-key (kbd (concat super-keybind-prefix "w")) 'ace-window)
 
 (global-set-key (kbd "C-.") 'helm-projectile-ag)
 (global-set-key (kbd "C-,") 'helm-projectile-find-file)
