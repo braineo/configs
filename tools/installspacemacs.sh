@@ -65,7 +65,7 @@ do
         rm -rf ${TARGET}
     fi;
     printf "${BLUE}Linking layer $layer...${NORMAL}\n"
-    ln -s "${BEMACS}/emacs/spacemacs/${layer}" ${TARGET}
+    ln -s "${BEMACS}/emacs/spacemacs/layers/${layer}" ${TARGET}
 done
 
 # Symlink config dotfile
