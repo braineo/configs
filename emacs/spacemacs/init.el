@@ -68,6 +68,8 @@ This function should only modify configuration layer settings."
      semantic
      (version-control :variables
                       version-control-diff-tool 'diff-hl)
+     yaml
+     ansible
      braineo
      )
    ;; List of additional packages that will be installed without being
