@@ -10,4 +10,4 @@ fi;
 
 PRIVATEPATH=$(pwd)
 echo "Linking jsbeautify config"
-ln -s "${PRIVATEPATH}/jsbeautifyrc" "${TARGET}"
+ln -s "${PRIVATEPATH}/jsbeautifyrc.config" "${TARGET}"
