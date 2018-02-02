@@ -46,8 +46,7 @@ This function should only modify configuration layer settings."
      swift
      git
      (osx :variables
-          osx-option-as 'hyper
-          osx-command-as 'meta)
+          osx-swap-option-and-command t)
      markdown
      nlinum
      neotree
