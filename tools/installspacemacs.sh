@@ -56,7 +56,7 @@ git clone --depth=1 https://github.com/syl20bnr/spacemacs $SPACEMACSPATH || {
 }
 
 # Symlink private layers
-declare -a layers=("braineo" "braineo-ui" "braineo-editor" "braineo-global-keybindings")
+declare -a layers=("braineo" "braineo-ui" "braineo-editor" "braineo-global-keybindings" "braineo-lang")
 
 for layer in "${layers[@]}"
 do
