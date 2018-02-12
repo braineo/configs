@@ -65,7 +65,6 @@ This function should only modify configuration layer settings."
             c-c++-default-mode-for-headers 'c++-mode)
      major-modes
      imenu-list
-     semantic
      (version-control :variables
                       version-control-diff-tool 'diff-hl)
      yaml
