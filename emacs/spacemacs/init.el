@@ -59,7 +59,9 @@ This function should only modify configuration layer settings."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      syntax-checking
-     python
+     lsp
+     (python :variables
+             python-backend 'lsp)
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
