@@ -13,3 +13,6 @@
     (set-face-background 'default "unspecified-bg" frame)))
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
+
+;; Temporarily fix: after lsp-ui shows up, helm is not updating
+(add-hook 'helm-major-mode-hook 'lsp-ui-doc--delete-frame)
