@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      lsp
      (python :variables
              python-backend 'lsp)
+     cmake
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
