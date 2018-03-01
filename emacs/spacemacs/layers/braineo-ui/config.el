@@ -15,4 +15,7 @@
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
 ;; Temporarily fix: after lsp-ui shows up, helm is not updating
-(add-hook 'helm-major-mode-hook 'lsp-ui-doc--delete-frame)
+(defun delete-lsp-ui-frame()
+  (when (bound-and-true-p lsp-ui-mode)
+    'lsp-ui-doc--delete-frame))
+(add-hook 'helm-major-mode-hook 'delete-lsp-ui-frame)
