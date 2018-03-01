@@ -72,7 +72,8 @@ This function should only modify configuration layer settings."
      major-modes
      imenu-list
      (version-control :variables
-                      version-control-diff-tool 'diff-hl)
+                      version-control-diff-tool 'diff-hl
+                      version-control-diff-side 'left)
      yaml
      ansible
      braineo
@@ -201,7 +202,7 @@ It should only modify the values of Spacemacs settings."
    ;; to create your own spaceline theme. Value can be a symbol or list with\
    ;; additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(vim-powerline :separator arrow :separator-scale 1.5)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)

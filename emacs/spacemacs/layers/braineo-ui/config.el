@@ -19,3 +19,6 @@
   (when (bound-and-true-p lsp-ui-mode)
     'lsp-ui-doc--delete-frame))
 (add-hook 'helm-major-mode-hook 'delete-lsp-ui-frame)
+
+;; Use all-the-icons theme
+(setq neo-theme 'icons)

@@ -9,7 +9,7 @@
 (global-set-key [(meta shift up)]  'move-text-up)
 (global-set-key [(meta shift down)]  'move-text-down)
 (global-set-key (kbd "C-c n") 'crux-cleanup-buffer-or-region)
-(global-set-key (kbd "C-c f")  'crux-recentf-find-file)
+(global-set-key (kbd "C-c f")  'helm-recentf)
 (global-set-key (kbd "C-M-z") 'crux-indent-defun)
 (global-set-key (kbd "C-c u") 'crux-view-url)
 (global-set-key (kbd "C-c e") 'crux-eval-and-replace)
@@ -28,7 +28,7 @@
 (global-set-key (kbd (concat super-keybind-prefix "p")) 'projectile-command-map)
 ;; make some use of the Super key
 ;; (global-set-key (kbd "s-g") 'god-local-mode)
-(global-set-key (kbd (concat super-keybind-prefix "r")) 'crux-recentf-find-file)
+(global-set-key (kbd (concat super-keybind-prefix "r")) 'helm-recentf)
 (global-set-key (kbd (concat super-keybind-prefix "j")) 'crux-top-join-line)
 (global-set-key (kbd (concat super-keybind-prefix "k")) 'crux-kill-whole-line)
 (global-set-key (kbd (concat super-keybind-prefix "o")) 'crux-smart-open-line-above)
