@@ -45,7 +45,7 @@ fi
 
 SPACEMACSPATH=$BEMACS/.emacs.d
 
-git clone git@github.com:braineo/configs.git $BEMACS || {
+git clone https://github.com:braineo/configs.git $BEMACS || {
     printf "Error: git clone of bemacs repo failed\n"
     exit 1
 }
