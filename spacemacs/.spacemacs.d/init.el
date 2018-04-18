@@ -60,11 +60,13 @@ This function should only modify configuration layer settings."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
      syntax-checking
-     lsp
-     (python :variables
-             python-backend 'lsp)
+     (spell-checking :variables
+                     spell-checking-enable-by-default nil)
+     python
+     ;; lsp
+     ;; (python :variables
+     ;;         python-backend 'lsp)
      cmake
      (c-c++ :variables
             c-c++-enable-clang-support t
@@ -202,7 +204,7 @@ It should only modify the values of Spacemacs settings."
    ;; to create your own spaceline theme. Value can be a symbol or list with\
    ;; additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(vim-powerline :separator arrow :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(all-the-icons :separator arrow :separator-scale 1.5)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
