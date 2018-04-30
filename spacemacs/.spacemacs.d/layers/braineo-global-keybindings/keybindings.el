@@ -55,8 +55,9 @@
 
 (global-set-key [remap kill-whole-line] 'crux-kill-whole-line)
 
-;; Activate occur easily inside isearch
-(define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch)
+;; Activate swoop easily inside isearch
+(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+(define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
 
 ;; Better kill-ring
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
