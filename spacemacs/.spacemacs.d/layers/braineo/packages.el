@@ -32,7 +32,8 @@
 (defconst braineo-packages
   '(crux
     xclip
-    helm)
+    helm
+    helm-swoop)
   "The list of Lisp packages required by the braineo layer.
 
 Each entry is either:
@@ -76,5 +77,11 @@ Each entry is either:
   :defer t
   :config
   (progn
+    (defun braineo-helm-swoop-keybindings ()
+      (define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop))
+
+    (with-eval-after-load 'helm-swoop
+      (braineo-helm-swoop-keybindings))
+
     (setq helm-split-window-inside-p t)))
 ;;; packages.el ends here
