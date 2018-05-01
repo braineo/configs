@@ -46,7 +46,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git brew ls forklift pip sublime zsh-syntax-highlighting zsh-completions gitfast autojump npm)
+plugins=(git brew ls forklift pip sublime fast-syntax-highlighting zsh-completions gitfast autojump npm)
 
 source $ZSH/oh-my-zsh.sh
 
