@@ -32,8 +32,7 @@
 (defconst braineo-packages
   '(crux
     xclip
-    helm
-    helm-swoop)
+    helm)
   "The list of Lisp packages required by the braineo layer.
 
 Each entry is either:
