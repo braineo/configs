@@ -1,7 +1,14 @@
+[user]
+	name = Binbin Ye
+[core]
+	editor = vim
+[push]
+	default = simple
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 [pull]
-    rebase = true
+	rebase = true
 [rebase]
-    stat = true
-    missingcommitscheck = warn
-[url "git@github.com:"]
-      insteadOf = https://github.com/
+	stat = true
+	autostash = true
+	missingcommitscheck = warn
