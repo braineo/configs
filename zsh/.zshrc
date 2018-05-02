@@ -46,7 +46,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git brew ls forklift pip sublime fast-syntax-highlighting zsh-completions gitfast autojump npm)
+plugins=(git brew ls forklift pip sublime fast-syntax-highlighting zsh-completions gitfast fasd npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,9 +120,6 @@ GIT_PS1_DESCRIBE_STYLE='branch'
 
 # Z shell setup
 unsetopt nomatch
-
-#Auto Jump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # pure prompt https://github.com/sindresorhus/pure
 fpath=("/usr/local/lib/node_modules/pure-prompt/" $fpath)
