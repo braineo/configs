@@ -31,7 +31,6 @@
 
 (defconst braineo-editor-packages
   '(easy-kill
-    bm
     smartparens)
   "The list of Lisp packages required by the braineo-editor layer.
 
@@ -61,8 +60,6 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 (defun braineo-editor/init-easy-kill ())
-
-(defun braineo-editor/init-bm ())
 
 (defun braineo-editor/post-init-smartparens ()
   (use-package smartparens

@@ -38,6 +38,8 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     bm
+     fasd
      (helm :variables
            helm-buffer-max-length nil)
      auto-completion
@@ -45,6 +47,7 @@ This function should only modify configuration layer settings."
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
      emacs-lisp
+     parinfer
      swift
      git
      (osx :variables
