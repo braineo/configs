@@ -27,12 +27,17 @@ all: help
 install: check-TARGET
 	stow --verbose=1 -R ${TARGET} -t ${HOME}
 
+.PHONY: remove
+remove: check-TARGET
+	stow --verbose=1 -D ${TARGET} -t ${HOME}
+
 define help_string
 Usage:
 
-  ${blue}Install various configurations for tool:${end}
+  ${blue}Install/uninstall various configurations for tool:${end}
 
     make TARGET=git install
+		make TARGET=git remove
 
     replace git to other tools like zsh, flake8
 endef
