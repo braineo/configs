@@ -58,11 +58,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast brew ls forklift pip sublime fast-syntax-highlighting zsh-completions fasd npm)
+plugins=(git gitfast brew ls forklift pip sublime fast-syntax-highlighting zsh-completions npm z)
 
 source $ZSH/oh-my-zsh.sh
-source .zsh_aliases
-source .zsh_functions
+source $HOME/.zsh_aliases
+source $HOME/.zsh_functions
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
