@@ -34,12 +34,12 @@ remove: check-TARGET
 define help_string
 Usage:
 
-  ${blue}Install/uninstall various configurations for tool:${end}
-
+  ${blue}Install/uninstall various configurations for tool${end}
+  Example:
     make TARGET=git install
-		make TARGET=git remove
+    make TARGET=git remove
 
-    replace git to other tools like zsh, flake8
+    replace git to other tools like oh-my-zsh, flake8
 endef
 export help_string
 .PHONY: help

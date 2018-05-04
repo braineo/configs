@@ -39,7 +39,6 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      bm
-     fasd
      (helm :variables
            helm-buffer-max-length nil)
      auto-completion
