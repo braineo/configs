@@ -77,14 +77,6 @@ zinput_mode='emacs'
 zhighlighters=(main brackets cursor)
 
 #
-# History-substring-search
-#
-
-# Extra key binding
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-
-#
 # SSH
 #
 

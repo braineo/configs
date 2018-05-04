@@ -1,3 +1,5 @@
+unsetopt NOMATCH
+
 if [[ "$OSTYPE" == linux* ]]; then
 
 elif  [[ "$OSTYPE" = darwin* ]]; then
