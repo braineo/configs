@@ -30,7 +30,10 @@
 ;;; Code:
 
 (defconst braineo-ui-packages
-  '(highlight-indentation indent-guide)
+  '(highlight-indentation
+    indent-guide
+    (linum :excluded t)
+    (linum-relative :excluded t))
   "The list of Lisp packages required by the braineo-ui layer.
 
 Each entry is either:

@@ -52,7 +52,6 @@ This function should only modify configuration layer settings."
      (osx :variables
           osx-swap-option-and-command t)
      markdown
-     nlinum
      neotree
      org
      colors
