@@ -25,7 +25,7 @@ alias gfa='git fetch --all --prune'
 alias gcl='git clone --recursive'
 alias gd='git diff'
 alias gdca='git diff --cached'
-
+alias gsu='git submodule update'
 
 #
 # navigation
