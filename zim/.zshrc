@@ -19,3 +19,5 @@ source ${HOME}/.zshell/aliases.zsh
 # Extra key binding
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+
+eval $(thefuck --alias)
