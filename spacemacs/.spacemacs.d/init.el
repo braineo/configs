@@ -30,6 +30,7 @@ This function should only modify configuration layer settings."
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
+
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
@@ -49,22 +50,22 @@ This function should only modify configuration layer settings."
      parinfer
      swift
      git
+     debug
      (osx :variables
           osx-swap-option-and-command t)
      markdown
      neotree
      org
      colors
-     ;; themes-megapack
-     react
-     typescript
+     python
+     ;; typescript
+     ;; react
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      syntax-checking
      (spell-checking :variables
                      spell-checking-enable-by-default nil)
-     python
      ;; lsp
      ;; (python :variables
      ;;         python-backend 'lsp)
@@ -79,8 +80,7 @@ This function should only modify configuration layer settings."
                       version-control-diff-side 'left)
      yaml
      ansible
-     braineo
-     )
+     braineo)
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -194,7 +194,6 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
-                         sanityinc-tomorrow-eighties
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
