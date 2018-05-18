@@ -20,15 +20,10 @@
                                         :width normal))
       (spacemacs/set-default-font dotspacemacs-default-font))))
 
-(defun set-font-size(size)
+(defun set-font-size(font-size)
   "Auto resize font for HiDPI displays"
-  (interactive "nfont size: "
-      (progn)
-      (setq dotspacemacs-default-font `("Source Code Pro"
-                                        :size ,size
-                                        :weight normal
-                                        :width normal))
-      (spacemacs/set-default-font dotspacemacs-default-font)))
+  (interactive "nfont size: ")
+  (spacemacs/set-default-font (append dotspacemacs-default-font `(:size ,font-size))))
 
 (defun braineo-ui/line-number-maybe-on ()
   (when (spacemacs/enable-line-numbers-p)
