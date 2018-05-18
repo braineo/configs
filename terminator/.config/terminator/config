@@ -128,6 +128,8 @@
     palette = "#000000:#fc4346:#50fb7c:#f0fb8c:#49baff:#fc4cb4:#8be9fe:#ededec:#555555:#fc4346:#50fb7c:#f0fb8c:#49baff:#fc4cb4:#8be9fe:#ededec"
     scrollback_infinite = True
     scrollback_lines = 100000
+    scrollbar_position = hidden
+    show_titlebar = False
     use_custom_command = True
     use_system_font = False
   [[laptop]]
