@@ -58,6 +58,8 @@ This function should only modify configuration layer settings."
      org
      colors
      python
+     javascript
+     shell-script
      ;; typescript
      ;; react
      ;; (shell :variables
@@ -76,7 +78,6 @@ This function should only modify configuration layer settings."
      major-modes
      imenu-list
      (version-control :variables
-                      version-control-diff-tool 'diff-hl
                       version-control-diff-side 'left)
      yaml
      json
@@ -212,9 +213,9 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
-                               :weight normal
+   dotspacemacs-default-font '("Operator Mono"
+                               :size 12
+                               :weight light
                                :width normal)
 
    ;; The leader key (default "SPC")
