@@ -9,9 +9,6 @@
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
-;; Temporarily fix: after lsp-ui shows up, helm is not updating
-(add-hook 'helm-major-mode-hook 'delete-lsp-ui-frame)
-
 ;; Use all-the-icons theme
 (setq neo-theme 'icons)
 

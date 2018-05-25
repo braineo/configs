@@ -3,10 +3,6 @@
   (unless (display-graphic-p frame)
     (set-face-background 'default "unspecified-bg" frame)))
 
-(defun delete-lsp-ui-frame()
-  (when (bound-and-true-p lsp-ui-mode)
-    'lsp-ui-doc--delete-frame))
-
 (defun fit-font-size-to-dpi()
   "Auto resize font for HiDPI displays"
   (let* ((resolution-height (nth 3 (frame-monitor-attribute 'geometry)))

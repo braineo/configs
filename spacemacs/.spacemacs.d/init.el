@@ -67,9 +67,6 @@ This function should only modify configuration layer settings."
      syntax-checking
      (spell-checking :variables
                      spell-checking-enable-by-default nil)
-     ;; lsp
-     ;; (python :variables
-     ;;         python-backend 'lsp)
      cmake
      (c-c++ :variables
             c-c++-enable-clang-support t
