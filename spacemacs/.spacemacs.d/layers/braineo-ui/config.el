@@ -11,10 +11,3 @@
 
 ;; Use all-the-icons theme
 (setq neo-theme 'icons)
-
-(if (or (eq dotspacemacs-line-numbers t)
-        (eq dotspacemacs-line-numbers 'relative))
-    (progn
-      (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-      (add-hook 'text-mode-hook 'display-line-numbers-mode))
-  (add-hook 'after-change-major-mode-hook 'spacemacs/nlinum-maybe-onbraineo-ui/line-number-maybe-on))
