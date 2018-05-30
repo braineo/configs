@@ -488,7 +488,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   "Library to load while dumping.
 This function is called while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included
-in the dump.")
+in the dump."
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:

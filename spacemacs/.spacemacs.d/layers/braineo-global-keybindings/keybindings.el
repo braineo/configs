@@ -72,3 +72,6 @@
 
 (global-set-key (kbd "C-.") 'helm-projectile-ag)
 (global-set-key (kbd "C-,") 'helm-projectile-find-file)
+
+(global-set-key (kbd "C-<f2>") 'bm-toggle)
+(global-set-key (kbd "<f2>") 'bm-next)
