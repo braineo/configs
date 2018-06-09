@@ -5,7 +5,7 @@
 
 ;; When it is macOS and verison number is higher than 26.0
 (when (and (spacemacs/system-is-mac) (>= emacs-major-version 26))
-  (setq default-frame-alist '((ns-transparent-titlebar . t) (ns-appearance . 'nil))))
+  (setq default-frame-alist '((ns-transparent-titlebar . t) (ns-appearance . dark))))
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
