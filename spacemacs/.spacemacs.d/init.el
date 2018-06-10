@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      bm
      (helm :variables
-           helm-buffer-max-length nil)
+           helm-enable-auto-resize t)
      auto-completion
      better-defaults
      (ibuffer :variables
