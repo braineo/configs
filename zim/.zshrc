@@ -20,4 +20,6 @@ source ${HOME}/.zshell/aliases.zsh
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-eval $(thefuck --alias)
+if command -v thefuck > /dev/null 2>&1; then
+   eval $(thefuck --alias)
+fi
