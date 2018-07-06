@@ -31,9 +31,7 @@
 
 (defconst braineo-ui-packages
   '(highlight-indentation
-    indent-guide
-    (linum :excluded t)
-    (linum-relative :excluded t))
+    indent-guide)
   "The list of Lisp packages required by the braineo-ui layer.
 
 Each entry is either:
@@ -73,10 +71,4 @@ Each entry is either:
       (set-face-background 'highlight-indentation-current-column-face "#121314"))
     ))
 
-(defun braineo-ui/post-init-indent-guide ()
-  (use-package highlight-indentation
-    :defer t
-    :init
-    (progn
-      (add-hook 'python-mode-hook 'indent-guide-mode))))
 ;;; packages.el ends here
