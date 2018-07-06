@@ -121,7 +121,7 @@
     background_type = transparent
     cursor_color = "#e4e4e4"
     custom_command = zsh -l
-    font = Source Code Pro Medium 8
+    font = Operator Mono Light 8
     foreground_color = "#ebece6"
     icon_bell = False
     login_shell = True
