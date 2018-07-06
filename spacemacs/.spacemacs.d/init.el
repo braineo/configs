@@ -55,7 +55,6 @@ This function should only modify configuration layer settings."
           osx-swap-option-and-command t)
      markdown
      neotree
-     org
      colors
      python
      javascript
