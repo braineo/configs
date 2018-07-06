@@ -7,7 +7,8 @@
 (when (and (spacemacs/system-is-mac) (>= emacs-major-version 26))
   (setq default-frame-alist '((ns-transparent-titlebar . t) (ns-appearance . dark))))
 
-(add-hook 'after-make-frame-functions 'on-frame-open)
+;; Not looks good always, maybe just keep it as solid background
+;; (add-hook 'after-make-frame-functions 'on-frame-open)
 
 ;; Use all-the-icons theme
 (setq neo-theme 'icons)
