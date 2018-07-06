@@ -481,6 +481,15 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; make helm buffer wider to display full file names
+  (setq helm-buffer-max-length 40)
+  (setq ibuffer-formats '((mark modified read-only " "
+                                (name 40 40 :left :elide)
+                                " "
+                                (size 9 -1 :right)
+                                " "
+                                (mode 16 16 :left :elide)
+                                " " filename-and-process)))
   (add-hook 'prog-mode-hook 'rainbow-mode)
   )
 
