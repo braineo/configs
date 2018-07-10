@@ -109,3 +109,14 @@
 ;; Bookmark line and jump back and forth
 (global-set-key (kbd "C-<f2>") 'bm-toggle)
 (global-set-key (kbd "<f2>") 'bm-next)
+
+;; fold
+(global-set-key (kbd "C-<tab>") 'evil-toggle-fold)
+
+;; anzu-mode enhances isearch & query-replace by showing total matches and current match position
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+
+;; Multiple cursors
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
