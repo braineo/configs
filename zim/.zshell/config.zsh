@@ -1,3 +1,3 @@
 unsetopt NOMATCH
 
-WORDCHARS=${WORDCHARS//[&-.;\/]}
+WORDCHARS=${WORDCHARS//[&-.;\/\_]}
