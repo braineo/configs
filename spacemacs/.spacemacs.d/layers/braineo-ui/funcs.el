@@ -20,7 +20,3 @@
   "Auto resize font for HiDPI displays"
   (interactive "nfont size: ")
   (spacemacs/set-default-font (append dotspacemacs-default-font `(:size ,font-size))))
-
-(defun braineo-ui/line-number-maybe-on ()
-  (when (spacemacs/enable-line-numbers-p)
-    (display-line-numbers-mode)))
