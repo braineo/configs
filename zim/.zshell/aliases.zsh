@@ -1,5 +1,5 @@
 if [[ "$OSTYPE" == linux* ]]; then
-    alias emacs="emacsclient -t"
+    alias emacs="emacsclient -t -a ''"
     alias emacsapp="LC_CTYPE=zh_CN.UTF-8 /usr/local/bin/emacs"
 elif  [[ "$OSTYPE" = darwin* ]]; then
     alias emacsapp="open -a /Applications/Emacs.app"
