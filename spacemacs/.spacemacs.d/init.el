@@ -491,6 +491,10 @@ before packages are loaded."
                                 (mode 16 16 :left :elide)
                                 " " filename-and-process)))
   (add-hook 'prog-mode-hook 'rainbow-mode)
+  ;; https://github.com/syl20bnr/spacemacs/issues/9836#issuecomment-408738233
+  (ad-deactivate #'split-window-internal)
+  ;; https://github.com/syl20bnr/spacemacs/issues/10938
+  (setq frame-title-format nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
