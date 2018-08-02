@@ -3,8 +3,6 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40
 if [[ "$OSTYPE" == linux* ]]; then
 
 elif  [[ "$OSTYPE" = darwin* ]]; then
-    export PATH="$/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2015/bin/x86_64-darwin/:$PATH"
-
     # Homebrew python
     export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
