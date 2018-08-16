@@ -53,10 +53,13 @@ This function should only modify configuration layer settings."
      debug
      (osx :variables
           osx-swap-option-and-command t)
+     latex
      markdown
      neotree
      colors
-     python
+     lsp
+     (python :variables
+             python-backend 'lsp)
      javascript
      ;; typescript
      ;; react
