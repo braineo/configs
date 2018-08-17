@@ -6,7 +6,8 @@
 
 (defun lsp-set-cfg ()
   (let ((lsp-cfg `(:pyls ((:configurationSources . ("flake8"))
-                          (:plugins (:pydocstyle (:enabled . t)))))))
+                          (:plugins (:pydocstyle (:enabled . t)
+                                                 (:ignore . ("D1"))))))))
     ;; TODO: check lsp--cur-workspace here to decide per server / project
     (lsp--set-configuration lsp-cfg)))
 
