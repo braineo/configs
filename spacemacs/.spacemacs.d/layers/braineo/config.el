@@ -2,11 +2,11 @@
 
 (if (spacemacs/system-is-mac) (setq super-keybind-prefix "H-"))
 
-(setq lsp-python-server-args '("-v" "--log-file" "~/.pyls.log"))
-;; (lsp--set-configuration `(:pyls , (:configurationSources . ("pycodestyle", "pyflakes"))))
+(setq lsp-python-server-args `("-v" "--log-file" ,(concat user-home-directory ".pyls.log")))
 
 (defun lsp-set-cfg ()
-  (let ((lsp-cfg `(:pyls (:configurationSources . ("flake8")))))
+  (let ((lsp-cfg `(:pyls ((:configurationSources . ("flake8"))
+                          (:plugins (:pydocstyle (:enabled . t)))))))
     ;; TODO: check lsp--cur-workspace here to decide per server / project
     (lsp--set-configuration lsp-cfg)))
 
