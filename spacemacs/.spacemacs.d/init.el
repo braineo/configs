@@ -55,11 +55,11 @@ This function should only modify configuration layer settings."
           osx-swap-option-and-command t)
      latex
      markdown
-     neotree
+     treemacs
      colors
      lsp
      (python :variables
-             python-backend 'lsp)
+             python-backend 'anaconda)
      javascript
      ;; typescript
      ;; react
