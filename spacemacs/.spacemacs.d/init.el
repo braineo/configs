@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      bm
+     copy-as-format
      (helm :variables
            helm-enable-auto-resize t)
      auto-completion
@@ -57,10 +58,13 @@ This function should only modify configuration layer settings."
      markdown
      treemacs
      colors
+     prettier
      lsp
      (python :variables
              python-backend 'anaconda)
-     javascript
+     (javascript :variables
+                 javascript-backend 'lsp
+                 javascript-fmt-tool 'prettier)
      ;; typescript
      ;; react
      ;; (shell :variables
