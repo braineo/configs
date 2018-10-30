@@ -82,7 +82,9 @@ This function should only modify configuration layer settings."
      (version-control :variables
                       version-control-diff-side 'left)
      yaml
-     json
+     (json :variables
+           json-reformat:indent-width 2
+           js-indent-level 2)
      ansible
      braineo)
 
@@ -491,6 +493,7 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; make helm buffer wider to display full file names
   (setq helm-buffer-max-length 40)
+  ;; left ibuffer show full path and file names
   (setq ibuffer-formats '((mark modified read-only " "
                                 (name 40 40 :left :elide)
                                 " "
@@ -498,6 +501,9 @@ before packages are loaded."
                                 " "
                                 (mode 16 16 :left :elide)
                                 " " filename-and-process)))
+  ;; magit popup style
+  (setq magit-display-buffer-function 'magit-display-buffer-fullcolumn-most-v1)
+  ;; enable rainbow mode
   (add-hook 'prog-mode-hook 'rainbow-mode)
   ;; https://github.com/syl20bnr/spacemacs/issues/9836#issuecomment-408738233
   (ad-deactivate #'split-window-internal)
