@@ -83,8 +83,7 @@ This function should only modify configuration layer settings."
                       version-control-diff-side 'left)
      yaml
      (json :variables
-           json-reformat:indent-width 2
-           js-indent-level 2)
+           json-fmt-tool 'prettier)
      ansible
      braineo)
 
@@ -507,8 +506,6 @@ before packages are loaded."
   (add-hook 'prog-mode-hook 'rainbow-mode)
   ;; https://github.com/syl20bnr/spacemacs/issues/9836#issuecomment-408738233
   (ad-deactivate #'split-window-internal)
-  ;; https://github.com/syl20bnr/spacemacs/issues/10938
-  (setq frame-title-format nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
