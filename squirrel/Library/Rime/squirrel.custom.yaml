@@ -1,0 +1,37 @@
+# Squirrel settings
+# encoding: utf-8
+
+patch:
+  style/horizontal: true
+  style/color_scheme: snazzy
+
+  # inline_preedit: true
+  # corner_radius: 10
+  # border_height: 0
+  # border_width: 0
+  # line_spacing: 1
+  # spacing: 5  # space between preedit and candidates in non-inline mode
+  # #candidate_format: '%c. %@ '
+  # font_face: 'Lucida Grande'  # supporting soft cursor '›'
+  # #font_point: 21
+  # #label_font_face: 'STHeitiTC-Medium'
+  # #label_font_point: 18
+  font_point: 8
+  preset_color_schemes:
+    backup:                                  #样式名称，就是上述“style/color_scheme: pure
+      author: "braineo"
+      name: "braineo"                        #作者名字
+      label_color: 0x282a36                  #预选栏编号颜色
+      hilited_comment_text_color: 0x00a5ea   #注解文字高亮
+    snazzy:
+      name: snazzy
+      author: braineo
+      back_color: 0x362A28                   #背景颜色
+      border_color: 0x302422
+      text_color: 0xEBF0EF                   #拼音串颜色（需要开启内嵌编码）
+      hilited_text_color: 0x9DF9F3           #拼音串高亮（需要开启内嵌编码）
+      hilited_back_color: 0x686868
+      hilited_candidate_text_color: 0x8EF75A #第一后选项文字颜色
+      hilited_candidate_back_color: 0x686868 #第一后选项背景颜色
+      candidate_text_color: 0xFFC757         #非第一后选项文字颜色
+      comment_text_color: 0xC16AFF           #注解文字颜色
