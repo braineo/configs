@@ -4,7 +4,7 @@
 patch:
   style/horizontal: true
   style/color_scheme: snazzy
-
+  style/font_point: 18
   # inline_preedit: true
   # corner_radius: 10
   # border_height: 0
