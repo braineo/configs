@@ -1,0 +1,14 @@
+########
+# view settings
+########
+set status-show-untracked-files = yes
+
+set main-view = id date author commit-title:graph=v2,refs=yes
+# set line-graphics = utf-8
+
+set refs-view = id date author ref commit-title
+set blob-view = line-number:yes,interval=1 text
+
+set diff-options = -m --first-parent
+
+set wrap-lines = yes
