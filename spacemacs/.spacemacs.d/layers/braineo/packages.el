@@ -32,7 +32,8 @@
 (defconst braineo-packages
   '(crux
     xclip
-    helm)
+    helm
+    anzu)
   "The list of Lisp packages required by the braineo layer.
 
 Each entry is either:
@@ -83,4 +84,15 @@ Each entry is either:
       (braineo-helm-swoop-keybindings))
 
     (setq helm-split-window-inside-p t)))
+
+(defun braineo/init-anzu ()
+  :defer t
+  :config
+  (progn
+    (defun braineo-anzu-keybindings ()
+      (define-key isearch-mode-map (kbd "M-%") 'anzu-isearch-query-replace)
+      (define-key isearch-mode-map (kbd "C-M-%") 'anzu-isearch-query-replace-regexp))
+    (with-eval-after-load 'anzu
+      (braineo-anzu-keybindings))))
+
 ;;; packages.el ends here
