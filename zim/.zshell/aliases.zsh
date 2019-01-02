@@ -47,3 +47,5 @@ alias 8='cd -8'
 alias 9='cd -9'
 
 alias d='dirs -v | head -10'
+
+alias ncdu='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
