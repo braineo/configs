@@ -1,0 +1,40 @@
+[/]
+new-window-inherit-state=true
+prompt-on-close=false
+quake-specific-monitor=0
+tab-position='top'
+sidebar-on-right=false
+terminal-title-style='small'
+theme-variant='dark'
+session-name='${title}'
+use-tabs=true
+new-instance-mode='new-session'
+quake-hide-headerbar=true
+custom-hyperlinks=@as []
+warn-vte-config-issue=false
+window-style='disable-csd-hide-toolbar'
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#EBECE6'
+visible-name='Default'
+login-shell=true
+palette=['#000000', '#FC4346', '#50FB7C', '#F0FB8C', '#49BAFF', '#FC4CB4', '#8BE9FE', '#EDEDEC', '#555555', '#FC4346', '#50FB7C', '#F0FB8C', '#49BAFF', '#FC4CB4', '#8BE9FE', '#EDEDEC']
+custom-command='zsh -l'
+badge-color-set=false
+show-scrollbar=false
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+use-custom-command=false
+bold-color-set=false
+font='Operator Mono Light 8'
+terminal-bell='none'
+background-color='#1E1F29'
+background-transparency-percent=6
+scrollback-lines=100000
+
+[keybindings]
+session-add-right='<Primary><Shift>e'
+session-open='disabled'
+session-add-down='<Primary><Shift>o'

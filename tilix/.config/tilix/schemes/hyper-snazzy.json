@@ -1,0 +1,26 @@
+
+{
+    "name": "Snazzy",
+    "comment": "Port from Hyper Snazzy",
+    "use-theme-colors": false,
+    "foreground-color": "#ebece6",
+    "background-color": "#1e1f29",
+    "palette": [
+        "#000000",
+        "#fc4346",
+        "#50fb7c",
+        "#f0fb8c",
+        "#49baff",
+        "#fc4cb4",
+        "#8be9fe",
+        "#ededec",
+        "#555555",
+        "#fc4346",
+        "#50fb7c",
+        "#f0fb8c",
+        "#49baff",
+        "#fc4cb4",
+        "#8be9fe",
+        "#ededec"
+    ]
+}
