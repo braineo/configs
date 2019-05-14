@@ -1,2 +1,12 @@
 [MESSAGES CONTROL]
-disable=line-too-long
+disable=line-too-long,
+        invalid-name,
+        C,
+        duplicate-code,
+        fixme,
+        missing-docstring,
+        protected-access,
+        too-few-public-methods,
+        too-many-arguments,
+        too-many-instance-attributes,
+        board-except
