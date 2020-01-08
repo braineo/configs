@@ -172,8 +172,8 @@ if command -v thefuck > /dev/null 2>&1; then
 fi
 
 # nvm for node
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Special source for tilix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
