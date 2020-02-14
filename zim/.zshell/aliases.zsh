@@ -16,15 +16,27 @@ alias killemacs="emacsclient -e '(kill-emacs)'"
 alias ga='git add'
 alias gaa='git add --all'
 alias gss='git status -s'
+# Local
+alias gs='git stash'
+alias gst='git reset'
+alias gco='git checkout'
 alias gcp='git cherry-pick'
+# Data
 alias gl='git pull'
+alias gp='git push'
+alias gpf='git push --force-with-lease'
+alias gm='git merge'
+# Log
 alias glg='git log --stat'
 alias glgp='git log --stat -p'
 alias glgg='git log --graph'
+# Upstream
 alias gfa='git fetch --all --prune'
 alias gcl='git clone --recursive'
+# Diff
 alias gd='git diff'
 alias gdca='git diff --cached'
+# Submodule
 alias gsu='git submodule update'
 
 #
