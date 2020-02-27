@@ -22,6 +22,7 @@ alias gst='git reset'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 # Data
+alias gc='git commit'
 alias gl='git pull'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
