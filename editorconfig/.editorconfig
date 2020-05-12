@@ -25,3 +25,7 @@ indent_size = 2
 [*.{json,y{a,}ml,el,{,z}sh}]
 indent_style = space
 indent_size = 2
+
+[*.{c,h,cpp,hpp}]
+indent_style = space
+indent_size = 4
