@@ -18,6 +18,8 @@ zmodule utility
 #
 # Exposes git repository status information to prompts.
 zmodule git-info
+# zmodule steeef  # fall back to this theme if pure is broken
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -37,8 +39,5 @@ zmodule ssh
 
 zmodule fasd
 
-# Pure theme
-zmodule sindresorhus/pure --source async.zsh --source pure.zsh
-
 # fzf fuzzy search
-zmodule junegunn/fzf
+zmodule junegunn/fzf -d
