@@ -30,6 +30,7 @@ alias gm='git merge'
 # Log
 alias glg='git log --stat'
 alias glgp='git log --stat -p'
+alias glgpd='BAT_PAGER="less -R" GIT_PAGER=delta glgp'
 alias glgg='git log --graph'
 # Upstream
 alias gfa='git fetch --all --prune'

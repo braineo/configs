@@ -1,5 +1,7 @@
 [user]
 	name = Binbin Ye
+	email = example@domain.com
+	signingkey = 0123456789012345
 [core]
 	editor = vim
 [push]
@@ -12,3 +14,47 @@
 	stat = true
 	autostash = true
 	missingcommitscheck = warn
+[log]
+	follow = true
+[color]
+	ui = true
+# diff-highlight is a perl script distributed with git that allows within-line edits to be identified
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[merge]
+	tool = meld
+[diff]
+	tool = vscode
+	colorMoved = default
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[commit]
+	gpgsign = true
+
+# delta is a 3rd party diff highlight tool written in rust
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    syntax-theme = Sublime Snazzy
+    features = line-numbers custom-style
+    whitespace-error-style = 22 reverse
+[delta "custom-style"]
+    plus-style = syntax "#203624"
+    minus-style = syntax "#362020"
+[delta "magit-delta"]
+    whitespace-error-style = 22 reverse
