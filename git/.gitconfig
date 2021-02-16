@@ -36,6 +36,8 @@
 [diff]
 	tool = vscode
 	colorMoved = default
+	algorithm = histogram
+	indentHeuristic = true
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [filter "lfs"]
