@@ -1,4 +1,5 @@
 unsetopt NOMATCH
+setopt extended_glob
 
 WORDCHARS=${WORDCHARS//[&-.;\/\_=]}
 
