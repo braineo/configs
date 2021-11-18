@@ -32,14 +32,19 @@
 	new = green bold
 	whitespace = red reverse
 [merge]
-	tool = meld
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+	conflictStyle = diff3
 [diff]
 	tool = vscode
 	colorMoved = default
 	algorithm = histogram
 	indentHeuristic = true
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "ediffclient"]
+	cmd = emacsclient --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -60,3 +65,5 @@
     minus-style = syntax "#362020"
 [delta "magit-delta"]
     whitespace-error-style = 22 reverse
+[github]
+	user = braineo
