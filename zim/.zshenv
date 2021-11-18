@@ -4,4 +4,6 @@
 
 # Define Zim location
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
-export GO111MODULE=auto
+export GO111MODULE=on
+
+GOPATH=${GOPATH:-$HOME/go}
