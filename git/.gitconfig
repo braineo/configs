@@ -44,7 +44,7 @@
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "ediffclient"]
-	cmd = emacsclient --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+	cmd = emacsclient --eval \"(progn (ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\") (select-frame-set-input-focus (selected-frame)))\"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
