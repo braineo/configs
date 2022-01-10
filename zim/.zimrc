@@ -1,3 +1,11 @@
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+zmodule ssh
+zmodule fasd
+# fzf fuzzy search
+zmodule junegunn/fzf -d
+
+
+# Start configuration added by Zim install {{{
 # -------
 # Modules
 # -------
@@ -16,10 +24,12 @@ zmodule utility
 #
 # Prompt
 #
-# Exposes git repository status information to prompts.
+# Exposes to prompts how long the last command took to execute, used by asciiship.
+zmodule duration-info
+# Exposes git repository status information to prompts, used by asciiship.
 zmodule git-info
-# zmodule steeef  # fall back to this theme if pure is broken
-zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+# zmodule asciiship
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -30,14 +40,10 @@ zmodule completion
 zmodule zsh-users/zsh-autosuggestions
 # Fish-like syntax highlighting for Zsh.
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
-zmodule zdharma-continuum/fast-syntax-highlighting
+# zmodule zsh-users/zsh-syntax-highlighting
 # Fish-like history search (up arrow) for Zsh.
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
+# }}} End configuration added by Zim install
 
-zmodule ssh
-
-zmodule fasd
-
-# fzf fuzzy search
-zmodule junegunn/fzf -d
+zmodule zdharma-continuum/fast-syntax-highlighting
