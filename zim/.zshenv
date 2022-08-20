@@ -1,5 +1,5 @@
 export GO111MODULE=on
-
+export PATH="$HOME/go/bin:$PATH"
 GOPATH=${GOPATH:-$HOME/go}
 
 # Start configuration added by Zim install {{{
