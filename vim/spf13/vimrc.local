@@ -1,3 +1,0 @@
-colorscheme eva01
-let g:spf13_keep_trailing_whitespace = 1
-set clipboard+=unnamed
