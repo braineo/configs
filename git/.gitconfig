@@ -18,12 +18,6 @@
 	follow = true
 [color]
 	ui = true
-# diff-highlight is a perl script distributed with git that allows within-line edits to be identified
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
@@ -34,7 +28,7 @@
 [merge]
 	tool = vscode
 [mergetool "vscode"]
-	cmd = code --wait $MERGED
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 	conflictStyle = diff3
 [diff]
 	tool = vscode
@@ -45,6 +39,9 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "ediffclient"]
 	cmd = emacsclient --eval \"(progn (ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\") (select-frame-set-input-focus (selected-frame)))\"
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+	prompt = false
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -55,15 +52,16 @@
 
 # delta is a 3rd party diff highlight tool written in rust
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-    syntax-theme = Sublime Snazzy
-    features = line-numbers custom-style
-    whitespace-error-style = 22 reverse
+	side-by-side = true
+	syntax-theme = Sublime Snazzy
+	whitespace-error-style = 22 reverse
+	navigate = true
+        features = custom-style
 [delta "custom-style"]
-    plus-style = syntax "#203624"
-    minus-style = syntax "#362020"
-[delta "magit-delta"]
-    whitespace-error-style = 22 reverse
+        plus-style = syntax "#203624"
+        minus-style = syntax "#362020"
+
 [github]
 	user = braineo
