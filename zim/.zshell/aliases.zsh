@@ -38,6 +38,8 @@ alias gcl='git clone --recursive'
 # Diff
 alias gd='git diff'
 alias gdca='git diff --cached'
+
+alias dgd='GIT_PAGER=delta gd'
 # Submodule
 alias gsu='git submodule update'
 
