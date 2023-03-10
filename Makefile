@@ -2,7 +2,7 @@ TARGET ?=
 
 
 # Colors
-end:=$(shell echo -e "\033[0m")
+end:=$(shell tput -Txterm sgr0)
 black=$(shell echo -e "\033[0;30m")
 blackb=$(shell echo -e "\033[1;30m")
 white=$(shell echo -e "\033[0;37m")
@@ -13,7 +13,7 @@ green=$(shell echo -e "\033[0;32m")
 greenb=$(shell echo -e "\033[1;32m")
 yellow=$(shell echo -e "\033[0;33m")
 yellowb=$(shell echo -e "\033[1;33m")
-blue=$(shell echo -e "\033[0;34m")
+blue=$(shell tput -Txterm setaf 6)
 blueb=$(shell echo -e "\033[1;34m")
 purple=$(shell echo -e "\033[0;35m")
 purpleb=$(shell echo -e "\033[1;35m")
