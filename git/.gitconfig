@@ -30,14 +30,18 @@
 [mergetool "vscode"]
 	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 	conflictStyle = diff3
+[diff "common-lisp"]
+	xfuncname="^\\((def\\S+\\s+\\S+)"
+[diff "elisp"]
+	xfuncname="^\\(((use-package|(def\\S+))\\s+\\S+)"
 [diff]
 	tool = vscode
 	colorMoved = default
 	algorithm = histogram
 	indentHeuristic = true
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
-[difftool "ediffclient"]
+	cmd = code --wait --diff "$LOCAL" "$REMOTE"
+[difftool "ediff"]
 	cmd = emacsclient --eval \"(progn (ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\") (select-frame-set-input-focus (selected-frame)))\"
 [difftool "difftastic"]
 	cmd = difft "$LOCAL" "$REMOTE"
