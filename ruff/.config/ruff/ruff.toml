@@ -1,0 +1,4 @@
+ignore = [
+  # line-length
+  "E501"
+]
