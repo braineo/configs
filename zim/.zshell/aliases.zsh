@@ -42,6 +42,8 @@ alias gdca='git diff --cached'
 alias dgd='GIT_PAGER=delta gd --ignore-all-space'
 # Submodule
 alias gsu='git submodule update'
+# Housekeeping
+alias gbc='git branch --merged | rg -v "(^\*|master|dev|v\d)" | xargs git branch -D'
 
 #
 # navigation
