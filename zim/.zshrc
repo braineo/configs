@@ -155,6 +155,9 @@ if [[ $TILIX_ID || $INSIDE_EMACS ]] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
 
+if [[ $WEZTERM_CONFIG_FILE ]]; then
+    source /etc/profile.d/wezterm.sh
+fi
 # -------------------
 # Pyenv Configuration
 # -------------------
