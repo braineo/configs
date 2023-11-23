@@ -34,7 +34,12 @@ config.keys = {
     key = "e",
     mods = "CTRL|SHIFT",
     action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-  }
+  },
+}
+
+config.window_frame = {
+  font = wezterm.font("Operator Mono", { weight = "Book" }),
+  font_size = 8.0,
 }
 
 -- and finally, return the configuration to wezterm
