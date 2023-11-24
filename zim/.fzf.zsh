@@ -29,6 +29,9 @@ _fzf_complete_gdb_post() {
   awk '{print $2}'
 }
 
+alias _fzf_complete_lldb=_fzf_complete_gdb
+alias _fzf_complete_lldb_post=_fzf_complete_gdb_post
+
 _gen_fzf_default_opts() {
 
     local color00='#1f2022'

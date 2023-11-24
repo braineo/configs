@@ -10,6 +10,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+local is_mac = io.popen('uname -s','r'):read('*l') == 'Darwin'
+
 -- This is where you actually apply your config choices
 
 config.audible_bell = "Disabled"
@@ -18,8 +20,11 @@ config.scrollback_lines = 1000000
 -- For example, changing the color scheme:
 config.color_scheme = "Snazzy"
 
-config.font = wezterm.font("Operator Mono", { weight = "ExtraLight" })
-config.font_size = 8.0
+local config_font = wezterm.font("Operator Mono", { weight = is_mac and "Book" or "ExtraLight" })
+local config_font_size = is_mac and 12.0 or 8.0
+
+config.font = config_font
+config.font_size = config_font_size
 
 config.window_background_opacity = 0.95
 
@@ -38,8 +43,8 @@ config.keys = {
 }
 
 config.window_frame = {
-  font = wezterm.font("Operator Mono", { weight = "Book" }),
-  font_size = 8.0,
+  font = config_font,
+  font_size = config_font_size,
 }
 
 -- and finally, return the configuration to wezterm

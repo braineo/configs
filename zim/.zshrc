@@ -156,7 +156,11 @@ if [[ $TILIX_ID || $INSIDE_EMACS ]] || [ $VTE_VERSION ]; then
 fi
 
 if [[ $WEZTERM_CONFIG_FILE ]]; then
-    source /etc/profile.d/wezterm.sh
+    if [[ $(uname) == "Darwin" ]]; then
+        source /Applications/WezTerm.app/Contents/Resources/wezterm.sh
+    elif command -v apt > /dev/null; then
+        source /etc/profile.d/wezterm.sh
+    fi
 fi
 # -------------------
 # Pyenv Configuration
