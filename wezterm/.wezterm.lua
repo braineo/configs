@@ -25,6 +25,7 @@ local config_font_size = is_mac and 12.0 or 8.0
 
 config.font = config_font
 config.font_size = config_font_size
+config.command_palette_font_size = config_font_size
 
 config.window_background_opacity = 0.95
 
