@@ -22,7 +22,7 @@ indent_style = tab
 indent_style = space
 indent_size = 2
 
-[*.{json,y{a,}ml,el,{,z}sh}]
+[*.{json,y{a,}ml,el,{,z}sh,tjp}]
 indent_style = space
 indent_size = 2
 
