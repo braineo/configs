@@ -48,5 +48,7 @@ config.window_frame = {
   font_size = config_font_size,
 }
 
+config.check_for_updates = false
+
 -- and finally, return the configuration to wezterm
 return config

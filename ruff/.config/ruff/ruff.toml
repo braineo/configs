@@ -1,9 +1,10 @@
-lint.ignore = [
+line-length = 120
+
+[lint]
+ignore = [
   # line-length
   "E501"
 ]
-
-line-length = 120
 
 [format]
 quote-style = "single"
