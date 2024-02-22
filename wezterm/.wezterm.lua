@@ -20,8 +20,8 @@ config.scrollback_lines = 1000000
 -- For example, changing the color scheme:
 config.color_scheme = "Snazzy"
 
-local config_font = wezterm.font("Operator Mono", { weight = is_mac and "Book" or "ExtraLight" })
-local config_font_size = is_mac and 12.0 or 8.0
+local config_font = wezterm.font("JetBrains Mono", { weight = "Regular" })
+local config_font_size = is_mac and 12.0 or 7.5
 
 config.font = config_font
 config.font_size = config_font_size
