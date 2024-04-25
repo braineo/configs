@@ -10,7 +10,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-local is_mac = io.popen('uname -s','r'):read('*l') == 'Darwin'
+local is_mac = io.popen("uname -s", "r"):read("*l") == "Darwin"
 
 -- This is where you actually apply your config choices
 
@@ -20,10 +20,15 @@ config.scrollback_lines = 1000000
 -- For example, changing the color scheme:
 config.color_scheme = "Snazzy"
 
-local config_font = wezterm.font_with_fallback{
-   { family = 'JetBrains Mono', weight = 'Medium' },
-   { family = 'WenQuanYi Micro Hei'},
-}
+local config_font = wezterm.font_with_fallback({
+  { family = "JetBrains Mono" },
+  { family = "Noto Color Emoji" },
+  { family = "Symbols Nerd Font Mono" },
+
+  { family = "LXGW Neo XiHei" },
+  { family = "WenQuanYi Micro Hei" },
+})
+
 local config_font_size = is_mac and 12.0 or 8.0
 
 config.font = config_font
