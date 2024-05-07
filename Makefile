@@ -25,7 +25,7 @@ all: help
 
 .PHONY: install
 install: check-TARGET
-	stow --verbose=1 -R ${TARGET} -t ${HOME}
+	stow --verbose=1 --dotfiles -R ${TARGET} -t ${HOME}
 
 .PHONY: remove
 remove: check-TARGET
