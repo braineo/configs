@@ -145,14 +145,9 @@ source ${HOME}/.zshell/aliases.zsh
 # Setup fzf
 source ~/.fzf.zsh
 
-# thefuck
-if command -v thefuck > /dev/null 2>&1; then
-   eval $(thefuck --alias)
-fi
-
-# Special source for tilix
-if [[ $TILIX_ID || $INSIDE_EMACS ]] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
+# gitlab cli
+if command -v glab > /dev/null 2>&1; then
+   source <(glab completion -s zsh); compdef _glab glab
 fi
 
 if [[ $WEZTERM_CONFIG_FILE ]]; then
