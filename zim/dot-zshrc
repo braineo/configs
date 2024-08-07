@@ -150,6 +150,10 @@ if command -v glab > /dev/null 2>&1; then
    source <(glab completion -s zsh); compdef _glab glab
 fi
 
+if command -v gh > /dev/null 2>&1; then
+   source <(gh completion -s zsh); compdef _gh gh
+fi
+
 if [[ $WEZTERM_CONFIG_FILE ]]; then
     if [[ $(uname) == "Darwin" ]]; then
         source /Applications/WezTerm.app/Contents/Resources/wezterm.sh
