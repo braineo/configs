@@ -2,7 +2,7 @@ zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 zmodule ssh
 zmodule fasd
 # fzf fuzzy search
-zmodule junegunn/fzf -d
+zmodule junegunn/fzf -d --on-pull './install --bin'
 
 
 # Start configuration added by Zim install {{{
