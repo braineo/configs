@@ -154,6 +154,10 @@ if command -v gh > /dev/null 2>&1; then
    source <(gh completion -s zsh); compdef _gh gh
 fi
 
+if command -v rustup > /dev/null 2>&1; then
+    source <(rustup completions zsh); compdef _rustup rustup
+fi
+
 if [[ $WEZTERM_CONFIG_FILE ]]; then
     if [[ $(uname) == "Darwin" ]]; then
         source /Applications/WezTerm.app/Contents/Resources/wezterm.sh
