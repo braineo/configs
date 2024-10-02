@@ -1,3 +1,5 @@
+# -*- mode: shell-script -*-
+
 zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 zmodule ssh
 zmodule fasd
@@ -33,6 +35,8 @@ zmodule git-info
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
+# fzf integrations
+zmodule chitoku-k/fzf-zsh-completions
 zmodule rust-lang/cargo --fpath src/etc --use degit
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after zsh-users/zsh-completions
