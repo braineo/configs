@@ -52,15 +52,12 @@ _fzf_complete_glab() {
 
     if [[ $glab_command = mr ]]; then
         local prefix_option completing_option
-        local glab_options_argument_required=(-R --repo)
+        local glab_options_argument_required=()
         local glab_options_argument_optional=()
 
         completing_option=$(_fzf_complete_parse_completing_option "$prefix" "$last_argument" "${(F)glab_options_argument_required}" "${(F)glab_options_argument_optional}" || :)
 
         case $completing_option in
-            -R|--repo)
-                return
-                ;;
 
             *)
                 if [[ $glab_subcommand = (checkout|close|merge|approve|todo|revoke) ]]; then
@@ -79,6 +76,10 @@ _fzf_complete_glab() {
                 ;;
         esac
 
+        return
+
+    elif [[ $glab_command = co ]]; then
+        _fzf_complete_glab-mr '' '' "$@"
         return
     fi
 
