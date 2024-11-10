@@ -192,3 +192,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [[ -f "${HOME}/.zshrc.extra" ]]; then
     source "${HOME}/.zshrc.extra"
 fi
+
+# bun
+if [[ -s "/home/binbin/.bun/_bun" ]]; then
+    source "/home/binbin/.bun/_bun"
+    export BUN_INSTALL="$HOME/.bun"
+    export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
