@@ -196,9 +196,16 @@ if [[ -f "${HOME}/.zshrc.extra" ]]; then
 fi
 
 # bun
-if [[ -s "/home/binbin/.bun/_bun" ]]; then
-    source "/home/binbin/.bun/_bun"
+if [[ -s "${HOME}/.bun/_bun" ]]; then
+    source "${HOME}/.bun/_bun"
     export BUN_INSTALL="$HOME/.bun"
     export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
+
+# fnm
+FNM_PATH="${HOME}/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="${HOME}/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
