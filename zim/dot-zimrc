@@ -1,6 +1,6 @@
 # -*- mode: shell-script -*-
-
-zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+zmodule romkatv/powerlevel10k --use degit
+# zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 zmodule ssh
 zmodule fasd
 # fzf fuzzy search
