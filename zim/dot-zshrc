@@ -176,6 +176,10 @@ if [[ $WEZTERM_CONFIG_FILE ]]; then
         source /etc/profile.d/wezterm.sh
     fi
 fi
+
+if command -v navi > /dev/null 2>&1; then
+    eval "$(navi widget zsh)"
+fi
 # -------------------
 # Pyenv Configuration
 # -------------------
