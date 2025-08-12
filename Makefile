@@ -29,7 +29,7 @@ install: check-TARGET
 
 .PHONY: remove
 remove: check-TARGET
-	stow --verbose=1 -D ${TARGET} -t ${HOME}
+	stow --verbose=1 --dotfiles -D ${TARGET} -t ${HOME}
 
 define help_string
 Usage:
