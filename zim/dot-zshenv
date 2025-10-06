@@ -2,7 +2,6 @@
 
 export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
-GOPATH=${GOPATH:-$HOME/go}
 
 . "$HOME/.cargo/env"
 
