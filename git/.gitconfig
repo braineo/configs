@@ -4,6 +4,7 @@
 	signingkey = 0123456789012345
 [core]
 	editor = vim
+	quotePath = false
 [push]
 	default = simple
 	autoSetupRemote = true
