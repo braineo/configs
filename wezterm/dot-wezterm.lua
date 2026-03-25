@@ -65,9 +65,7 @@ config.keys = {
   {
     key = "o",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitVertical({
-      domain = "CurrentPaneDomain",
-    }),
+    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
 
   {
@@ -88,9 +86,7 @@ config.keys = {
   {
     key = "e",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitHorizontal({
-      domain = "CurrentPaneDomain",
-    }),
+    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
 
   {
