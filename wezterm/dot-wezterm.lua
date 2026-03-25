@@ -13,27 +13,27 @@ end
 local is_mac = io.popen("uname -s", "r"):read("*l") == "Darwin"
 
 local function get_split_pane_args(pane)
-    local process = pane:get_foreground_process_info()
-    local args = {}
-    wezterm.log_info(process)
-    if process then
-        if process.name == 'ssh' then
-            args = process.argv
-        -- only handle docker exec
-        elseif process.name == 'docker' then
-            local is_exec = false
-            for _, arg in ipairs(process.argv) do
-                if arg == 'exec' then
-                    is_exec = true
-                    break
-                end
-            end
-            if is_exec then
-                args = process.argv
-            end
+  local process = pane:get_foreground_process_info()
+  local args = {}
+  wezterm.log_info(process)
+  if process then
+    if process.name == "ssh" then
+      args = process.argv
+      -- only handle docker exec
+    elseif process.name == "docker" then
+      local is_exec = false
+      for _, arg in ipairs(process.argv) do
+        if arg == "exec" then
+          is_exec = true
+          break
         end
+      end
+      if is_exec then
+        args = process.argv
+      end
     end
-    return args
+  end
+  return args
 end
 
 -- This is where you actually apply your config choices
@@ -65,25 +65,47 @@ config.keys = {
   {
     key = "o",
     mods = "CTRL|SHIFT",
+    action = wezterm.action.SplitVertical({
+      domain = "CurrentPaneDomain",
+    }),
+  },
+
+  {
+    key = "o",
+    mods = "CTRL|SHIFT|ALT",
     action = wezterm.action_callback(function(window, pane)
-          local something = get_split_pane_args(pane)
-          window:perform_action(wezterm.action.SplitVertical({
-                domain = "CurrentPaneDomain",
-                args = get_split_pane_args(pane),
-                }), pane)
+      local something = get_split_pane_args(pane)
+      window:perform_action(
+        wezterm.action.SplitVertical({
+          domain = "CurrentPaneDomain",
+          args = get_split_pane_args(pane),
+        }),
+        pane
+      )
     end),
   },
 
   {
     key = "e",
     mods = "CTRL|SHIFT",
+    action = wezterm.action.SplitHorizontal({
+      domain = "CurrentPaneDomain",
+    }),
+  },
+
+  {
+    key = "e",
+    mods = "CTRL|SHIFT|ALT",
 
     action = wezterm.action_callback(function(window, pane)
-          local something = get_split_pane_args(pane)
-          window:perform_action(wezterm.action.SplitHorizontal({
-                domain = "CurrentPaneDomain",
-                args = get_split_pane_args(pane),
-                }), pane)
+      local something = get_split_pane_args(pane)
+      window:perform_action(
+        wezterm.action.SplitHorizontal({
+          domain = "CurrentPaneDomain",
+          args = get_split_pane_args(pane),
+        }),
+        pane
+      )
     end),
   },
 }
