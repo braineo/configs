@@ -12,6 +12,42 @@ end
 
 local is_mac = io.popen("uname -s", "r"):read("*l") == "Darwin"
 
+local function split_pane(pane, directoin)
+    local process = pane:get_foreground_process_info()
+    local cmd = nil
+    wezterm.log_info(process)
+    if process then
+        if process.name == 'ssh' then
+            args = process.argv
+        -- only handle docker exec
+        elseif process.name == 'docker' then
+            local is_exec = false
+            for _, arg in ipairs(process.argv) do
+                if arg == 'exec' then
+                    is_exec = true
+                    break
+                end
+            end
+            if is_exec then
+                args = process.argv
+            end
+        end
+    end
+    if next(args) ~= nil then
+       local cmd_table = {}
+        for _, arg in ipairs(args) do
+            table.insert(cmd_table, string.format("%q", arg))
+        end
+        cmd = table.concat(cmd_table, ' ')
+    end
+
+    local new_pane = pane:split({direction = direction})
+
+    if cmd then
+       new_pane:send_text(cmd .. "\n")
+    end
+end
+
 -- This is where you actually apply your config choices
 
 config.audible_bell = "Disabled"
@@ -41,13 +77,17 @@ config.keys = {
   {
     key = "o",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+    action = wezterm.action_callback(function(window, pane)
+          split_pane(pane, "Down")
+    end),
   },
 
   {
     key = "e",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    action = wezterm.action_callback(function(window, pane)
+          split_pane(pane, "Right")
+    end),
   },
 }
 
