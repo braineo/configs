@@ -12,14 +12,14 @@ end
 
 local is_mac = io.popen("uname -s", "r"):read("*l") == "Darwin"
 
-local function split_pane(pane, direction)
+local function get_split_pane_args(pane)
     local process = pane:get_foreground_process_info()
-    local cmd = nil
-    local args = nil
-
+    local args = {}
+    wezterm.log_info(process)
     if process then
         if process.name == 'ssh' then
             args = process.argv
+        -- only handle docker exec
         elseif process.name == 'docker' then
             local is_exec = false
             for _, arg in ipairs(process.argv) do
@@ -33,25 +33,7 @@ local function split_pane(pane, direction)
             end
         end
     end
-
-    if args then
-        local cmd_table = {}
-        for _, arg in ipairs(args) do
-            -- only add quotes if the argument contains a space
-            if arg:find(' ') then
-                table.insert(cmd_table, string.format("%q", arg))
-            else
-                table.insert(cmd_table, arg)
-            end
-        end
-        cmd = table.concat(cmd_table, ' ')
-    end
-
-    local new_pane = pane:split({ direction = direction })
-
-    if cmd then
-       new_pane:send_text(cmd .. "\n")
-    end
+    return args
 end
 
 -- This is where you actually apply your config choices
@@ -84,15 +66,24 @@ config.keys = {
     key = "o",
     mods = "CTRL|SHIFT",
     action = wezterm.action_callback(function(window, pane)
-          split_pane(pane, "Bottom")
+          local something = get_split_pane_args(pane)
+          window:perform_action(wezterm.action.SplitVertical({
+                domain = "CurrentPaneDomain",
+                args = get_split_pane_args(pane),
+                }), pane)
     end),
   },
 
   {
     key = "e",
     mods = "CTRL|SHIFT",
+
     action = wezterm.action_callback(function(window, pane)
-          split_pane(pane, "Right")
+          local something = get_split_pane_args(pane)
+          window:perform_action(wezterm.action.SplitHorizontal({
+                domain = "CurrentPaneDomain",
+                args = get_split_pane_args(pane),
+                }), pane)
     end),
   },
 }
