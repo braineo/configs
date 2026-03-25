@@ -19,7 +19,7 @@ local function get_split_pane_args(pane)
   if process then
     if process.name == "ssh" then
       args = process.argv
-      -- only handle docker exec
+    -- only handle docker exec
     elseif process.name == "docker" then
       local is_exec = false
       for _, arg in ipairs(process.argv) do
