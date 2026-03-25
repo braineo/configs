@@ -12,14 +12,14 @@ end
 
 local is_mac = io.popen("uname -s", "r"):read("*l") == "Darwin"
 
-local function split_pane(pane, directoin)
+local function split_pane(pane, direction)
     local process = pane:get_foreground_process_info()
     local cmd = nil
-    wezterm.log_info(process)
+    local args = nil
+
     if process then
         if process.name == 'ssh' then
             args = process.argv
-        -- only handle docker exec
         elseif process.name == 'docker' then
             local is_exec = false
             for _, arg in ipairs(process.argv) do
@@ -33,15 +33,21 @@ local function split_pane(pane, directoin)
             end
         end
     end
-    if next(args) ~= nil then
-       local cmd_table = {}
+
+    if args then
+        local cmd_table = {}
         for _, arg in ipairs(args) do
-            table.insert(cmd_table, string.format("%q", arg))
+            -- only add quotes if the argument contains a space
+            if arg:find(' ') then
+                table.insert(cmd_table, string.format("%q", arg))
+            else
+                table.insert(cmd_table, arg)
+            end
         end
         cmd = table.concat(cmd_table, ' ')
     end
 
-    local new_pane = pane:split({direction = direction})
+    local new_pane = pane:split({ direction = direction })
 
     if cmd then
        new_pane:send_text(cmd .. "\n")
@@ -78,7 +84,7 @@ config.keys = {
     key = "o",
     mods = "CTRL|SHIFT",
     action = wezterm.action_callback(function(window, pane)
-          split_pane(pane, "Down")
+          split_pane(pane, "Bottom")
     end),
   },
 
