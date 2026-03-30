@@ -3,6 +3,8 @@
 export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
 
+export LESS="--ignore-case --jump-target=4 --LONG-PROMPT --quit-if-one-screen --RAW-CONTROL-CHARS"
+
 . "$HOME/.cargo/env"
 
 # Start configuration added by Zim install {{{
