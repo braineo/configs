@@ -31,6 +31,16 @@ install: check-TARGET
 remove: check-TARGET
 	stow --verbose=1 --dotfiles -D ${TARGET} -t ${HOME}
 
+# Packages currently in use
+PACKAGES := clangd fcitx5 rime ruff tig wezterm zim
+
+.PHONY: install-default
+install-default:
+	@for pkg in $(PACKAGES); do \
+		echo "${green}Installing $$pkg${end}"; \
+		stow --verbose=1 --dotfiles -R $$pkg -t ${HOME}; \
+	done
+
 define help_string
 Usage:
 
@@ -38,6 +48,7 @@ Usage:
   Example:
     make TARGET=git install
     make TARGET=git remove
+    make install-active
 
     replace git to other tools like oh-my-zsh, flake8
 endef
