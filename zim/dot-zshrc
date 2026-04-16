@@ -208,12 +208,11 @@ if [[ -f "${HOME}/.zshrc.extra" ]]; then
 fi
 
 # bun
-if [[ -s "${HOME}/.bun/_bun" ]]; then
-    source "${HOME}/.bun/_bun"
+if [[ -s "${HOME}/.bun/bin" ]]; then
     export BUN_INSTALL="$HOME/.bun"
     export PATH="$BUN_INSTALL/bin:$PATH"
+    [ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 fi
-
 
 # fnm
 FNM_PATH="${HOME}/.local/share/fnm"
