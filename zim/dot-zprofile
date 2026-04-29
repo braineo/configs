@@ -8,3 +8,8 @@ export PATH="${HOME}/.local/bin:$PATH"
 # for XWayland application
 export XMODIFIERS="@im=fcitx"
 # GTK_IM_MODULE, QT_IM_MODULE are not supposed to set in KDE
+
+if [[ -s "/opt/homebrew/bin/brew" ]]
+then
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+fi
