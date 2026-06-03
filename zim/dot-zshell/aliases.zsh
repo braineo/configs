@@ -32,6 +32,27 @@ alias dgd='GIT_PAGER=delta gd --ignore-all-space'
 alias gsu='git submodule update'
 # Housekeeping
 alias gbc='git branch --merged | rg -v "(^\*|master|dev|v\d)" | xargs git branch -D'
+# Worktree switcher (fzf). enter: cd into worktree, ^x: remove worktree
+gwt() {
+  git rev-parse --show-toplevel >/dev/null 2>&1 || {
+    print -u2 "gwt: not inside a git repository"
+    return 1
+  }
+
+  local selected
+  selected=$(
+    git worktree list |
+      fzf --height 40% --reverse \
+          --header 'enter: switch   ^x: remove' \
+          --preview 'git -C {1} log --oneline --decorate --color=always -20; \
+                     echo; git -C {1} -c color.status=always status -s' \
+          --preview-window 'right:60%' \
+          --bind 'ctrl-x:execute(git worktree remove {1})+reload(git worktree list)'
+  ) || return
+
+  local target=${selected%% *}
+  [[ -n $target ]] && cd -- "$target"
+}
 
 #
 # navigation
