@@ -47,8 +47,8 @@ elif [[ $VERSION == 30 ]]; then
     ../../emacs/configure --with-rsvg
     make -j"$(nproc)"
 else
-    ../../emacs/configure --with-dbus --with-modules --with-imagemagick --with-native-compilation --with-native-compilation=aot --with-tree-sitter --with-pgtk
-    make -j"$(nproc)" NATIVE_FULL_AOT=1
+    ../../emacs/configure --with-imagemagick --with-rsvg --with-native-compilation=aot --with-pgtk
+    make -j"$(nproc)"
 fi
 
 sudo checkinstall --fstrans=no -pkgversion "$PKGVERSION" -pkgname "$PKGNAME" -y --install=no
