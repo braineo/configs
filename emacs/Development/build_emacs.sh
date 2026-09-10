@@ -39,16 +39,14 @@ if [[ $VERSION == master ]]; then
     ../../emacs/configure --with-xml2 --with-dbus --with-rsvg --with-modules --with-gnutls --with-imagemagick --with-json \
         --enable-checking='yes,glyphs' --enable-check-lisp-object-type \
         CFLAGS='-O0 -g3'
-    make
 elif [[ $VERSION == 29 ]]; then
     ../../emacs/configure --with-dbus --with-modules --with-native-compilation=aot --with-json
-    make -j"$(nproc)"
 elif [[ $VERSION == 30 ]]; then
     ../../emacs/configure --with-rsvg
-    make -j"$(nproc)"
 else
     ../../emacs/configure --with-imagemagick --with-rsvg --with-native-compilation=aot --with-pgtk
-    make -j"$(nproc)"
 fi
 
-sudo checkinstall --fstrans=no -pkgversion "$PKGVERSION" -pkgname "$PKGNAME" -y --install=no
+make -j"$(nproc)"
+
+sudo checkinstall --fstrans=no -pkgversion "$PKGVERSION" -pkgname "$PKGNAME" -y --install=no --deldoc=yes --backup=no
