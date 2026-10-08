@@ -113,5 +113,6 @@ config.window_frame = {
 
 config.check_for_updates = false
 
+config.enable_kitty_keyboard = true
 -- and finally, return the configuration to wezterm
 return config
