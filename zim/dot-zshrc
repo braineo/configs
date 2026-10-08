@@ -151,6 +151,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 ### extra settings
 source ${HOME}/.zshell/config.zsh
 source ${HOME}/.zshell/aliases.zsh
+source ${HOME}/.zshell/functions.zsh
 
 # Setup fzf
 source ~/.fzf.zsh
