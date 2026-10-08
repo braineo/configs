@@ -2,7 +2,7 @@
 zmodule romkatv/powerlevel10k --use degit
 # zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 zmodule ssh
-zmodule fasd
+
 # fzf fuzzy search
 zmodule junegunn/fzf -d --on-pull './install --bin'
 
@@ -52,3 +52,5 @@ zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
 
 zmodule zdharma-continuum/fast-syntax-highlighting
+# z navigation
+zmodule antoineco/zim-zoxide
